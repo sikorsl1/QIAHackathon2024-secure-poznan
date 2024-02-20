@@ -23,14 +23,12 @@ Secure Quantum Digital Payment (see the paper [Demonstration of quantum-digital 
 
 ## Simulation data
 We have derived the following formula for probability of malicious merchant success. 
-$$
-p(\lambda, Q) = \sum_{k=1}^{\lambda} \binom{\lambda}{k} \left(\frac{1}{2}\right)^{\lambda}\sum_{j=0}^{\lfloor kQ\rfloor} \binom{k}{j} \left(\frac{1}{4}\right)^{j} \left(\frac{3}{4}\right)^{k-j}
-$$
+$$p(\lambda, Q) = \sum_{k=1}^{\lambda} \binom{\lambda}{k} \left(\frac{1}{2}\right)^{\lambda}\sum_{j=0}^{\lfloor kQ\rfloor} \binom{k}{j} \left(\frac{1}{4}\right)^{j} \left(\frac{3}{4}\right)^{k-j}$$
 It is parametrized by the number $\lambda$ of quantum states sended from TTP to Client and "QBER acceptable by TTP" which is maximal QBER $Q$ for wich TTP accepts the transaction.\
 This formula fits experimental data from simulation:\
 
 ![Figure 1](data/Figure_1.png "Figure 1")
-*Multiple simulation runs with Q = 0 and $\lambda = 5 \ldots 23$. The green smoth line is our analytical result. The probability was obtained by averaging over 100 runs.*
+*Multiple simulation runs with $Q = 0$ and $\lambda = 5 \ldots 23$. The green smoth line is our analytical result. The probability was obtained by averaging over 100 runs.*
 
 ![Figure 2](data/Figure_2.png "Figure 2")
 *Multiple simulation runs with $Q = 0\ldots 0.4375$ and $\lambda = 5 \ldots 23$. Smooth lines are analytical solutions. The probability was obtained by averaging over 100 runs.*
