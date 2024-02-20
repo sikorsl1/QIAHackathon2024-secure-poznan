@@ -1,0 +1,48 @@
+# Perfect 2 node network, no noise from either computation on the nodes or communication between nodes
+stacks:
+  - name: TTP
+    qdevice_typ: generic
+    qdevice_cfg:
+      dummy: null
+  - name: Client
+    qdevice_typ: generic
+    qdevice_cfg:
+      dummy: null
+  - name: Merchant
+    qdevice_typ: generic
+    qdevice_cfg:
+      dummy: null
+
+links:
+  - stack1: TTP
+    stack2: Client
+    typ: perfect
+    cfg:
+      dummy: null
+  - stack1: Client
+    stack2: Merchant
+    typ: perfect
+    cfg:
+      dummy: null
+  - stack1: Merchant
+    stack2: TTP
+    typ: perfect
+    cfg:
+      dummy: null
+
+clinks:
+  - stack1: TTP
+    stack2: Client
+    typ: instant
+    cfg:
+      dummy: null
+  - stack1: Client
+    stack2: Merchant
+    typ: instant
+    cfg:
+      dummy: null
+  - stack1: Merchant
+    stack2: TTP
+    typ: instant
+    cfg:
+      dummy: null
